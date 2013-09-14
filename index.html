@@ -11,15 +11,41 @@
   <style>
     body {font-size: 10px;}
     img {width: 100%; height: auto;}
-    div {color: white;}
+    div {color: white; position: relative;}
+    div span {position: absolute; top: 0; left: 0; border: 1px solid white;}
     #box-1 {width: 100px; height: 100px; background-color: blue;}
     #box-2 {width: 10em; height: 10em; background-color: green;}
   </style>
 </head>
 <body>
-  <img src="360x1.jpg" title="The kind of food you get after a night of drinking in Singapore">
-  <img src="360x1.5.jpg" title="The kind of food you get after a night of drinking in Singapore">
-  <img src="360x2.jpg" title="The kind of food you get after a night of drinking in Singapore">
+
+  <div>
+    <span>360 x 1.0</span>
+    <img src="360x1.jpg" title="The kind of food you get after a night of drinking in Singapore">
+  </div>
+  <div>
+    <span>360 x 1.5</span>
+    <img src="360x1.5.jpg" title="The kind of food you get after a night of drinking in Singapore">
+  </div>
+  <div>
+    <span>360 x 2.0</span>
+    <img src="360x2.jpg" title="The kind of food you get after a night of drinking in Singapore">
+  </div>
+
+  <div>
+    <span>320 x 1.0</span>
+    <img src="320x1.jpg" title="The kind of food you get after a night of drinking in Singapore">
+  </div>
+  <div>
+    <span>320 x 1.5</span>
+    <img src="320x1.5.jpg" title="The kind of food you get after a night of drinking in Singapore">
+  </div>
+  <div>
+    <span>320 x 2.0</span>
+    <img src="320x2.jpg" title="The kind of food you get after a night of drinking in Singapore">
+  </div>
+
+
   <div id="box-1">100px</div>
   <div id="box-2">10em</div>
 </body>

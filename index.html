@@ -3,20 +3,29 @@
 <head>
   <title>Resolution test</title>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta http-equiv="cleartype" content="on">
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- target-densityDpi=device-dpi, -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
 
   <style>
-    body {font-size: 10px;}
+    body {
+        font-size: 10px;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        perspective: 1200px;
+        -moz-perspective: 1200px;
+        -webkit-perspective: 1200px;
+
+    }
+
     img {width: 100%; height: auto;}
     div {position: relative;}
     div > div {width: 360px; height: 360px; background-size: 100%; background-position: 0 0;}

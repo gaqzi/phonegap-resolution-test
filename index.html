@@ -27,42 +27,50 @@
     }
 
     img {width: 100%; height: auto;}
-    div {position: relative; overflow: scroll;}
-    div > div {width: 360px; height: 360px; background-size: 100%; background-position: 0 0;}
+    div.container {position: relative; overflow: scroll;}
+    div.container > div {width: 360px; height: 360px; background-size: 100%; background-position: 0 0;}
     div span {position: absolute; top: 0; left: 0; border: 1px solid white; color: white; z-index: 1;}
     #box-1 {width: 100px; height: 100px; background-color: blue;}
     #box-2 {width: 10em; height: 10em; background-color: green;}
   </style>
+  <script src="js/iscroll-4.js"></script>
 </head>
 <body>
 
-  <div>
+  <div class="container">
     <span>360 x 1.0</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/360x540);"></div>
   </div>
-  <div>
+  <div class="container">
     <span>360 x 1.5</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/360x540@1.5);"></div>
   </div>
-  <div>
+  <div class="container">
     <span>360 x 2.0</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/360x540@2);"></div>
   </div>
 
-  <div>
+  <div class="container">
     <span>320 x 1.0</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480);"></div>
   </div>
-  <div>
+  <div class="container">
     <span>320 x 1.5</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5);"></div>
   </div>
-  <div>
+  <div class="container" id="zoomable">
     <span>320 x 2.0</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div>
   </div>
 
   <div id="box-1">100px</div>
   <div id="box-2">10em</div>
+
+  <script>
+    var scroller = new iScroll('zoomable', {
+        hideScrollbar: true,
+        zoom: true
+    });
+</script>
 </body>
 </html>

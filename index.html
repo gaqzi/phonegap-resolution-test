@@ -26,6 +26,14 @@
 
     }
 
+    .view-root {
+        position: absolute;
+        z-index: 100;
+        top: 0; left: 0;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
     img {width: 100%; height: auto;}
     div.container {position: relative; overflow: scroll;}
     div.container > div {width: 360px; height: 360px; background-size: 100%; background-position: 0 0;}
@@ -64,16 +72,18 @@
 -->
 <span>320 x 2.0</span>
 
-<div class="swiper-container magazine-issue">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide" id="zoomable">
-      <img src="http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5">
-      <!-- <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div> -->
-    </div>
+<div class="view-root">
+  <div class="swiper-container magazine-issue">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" id="zoomable">
+        <img src="http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5">
+        <!-- <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div> -->
+      </div>
 
-    <div class="swiper-slide">
-      <img src="http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5">
-      <!-- <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div> -->
+      <div class="swiper-slide">
+        <img src="http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5">
+        <!-- <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div> -->
+      </div>
     </div>
   </div>
 </div>

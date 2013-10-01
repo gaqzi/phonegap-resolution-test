@@ -36,7 +36,7 @@
   <script src="js/iscroll-4.js"></script>
 </head>
 <body>
-
+<!--
   <div class="container">
     <span>360 x 1.0</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/360x540);"></div>
@@ -58,8 +58,9 @@
     <span>320 x 1.5</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5);"></div>
   </div>
+-->
+<span>320 x 2.0</span>
   <div class="container" id="zoomable">
-    <span>320 x 2.0</span>
     <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div>
   </div>
 
@@ -67,10 +68,11 @@
   <div id="box-2">10em</div>
 
   <script>
-    var scroller = new iScroll('zoomable', {
-        hideScrollbar: true,
-        zoom: true
-    });
-</script>
+    var zoomable = document.getElementById('zoomable'),
+        scroller = new iScroll('zoomable', {
+            hideScrollbar: true,
+            zoom: true
+        });
+  </script>
 </body>
 </html>

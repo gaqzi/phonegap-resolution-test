@@ -33,7 +33,9 @@
     #box-1 {width: 100px; height: 100px; background-color: blue;}
     #box-2 {width: 10em; height: 10em; background-color: green;}
   </style>
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
   <script src="js/iscroll-4.js"></script>
+  <script src="js/idangerious-swiper.js"></script>
 </head>
 <body>
 <!--
@@ -60,20 +62,35 @@
   </div>
 -->
 <span>320 x 2.0</span>
-  <div class="container" id="zoomable">
-    <img src="http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2">
-    <!-- <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div> -->
+
+<div class="swiper-container magazine-issue">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" id="zoomable">
+      <img src="http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5">
+      <!-- <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div> -->
+    </div>
+
+    <div class="swiper-slide">
+      <img src="http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@1.5">
+      <!-- <div style="background-image: url(http://awsg-staging.mediapop.co/backend/api/2/image/397/320x480@2);"></div> -->
+    </div>
   </div>
+</div>
 
   <div id="box-1">100px</div>
   <div id="box-2">10em</div>
 
   <script>
+    var $('.swiper-container').swiper({
+        resistance: false,
+        noSwiping: true,
+        calculateHeight: false
+    });
     var zoomable = document.getElementById('zoomable'),
-        scroller = new iScroll('zoomable', {
-            hideScrollbar: true,
-            zoom: true
-        });
+    scroller = new iScroll('zoomable', {
+        hideScrollbar: true,
+        zoom: true
+    });
   </script>
 </body>
 </html>
